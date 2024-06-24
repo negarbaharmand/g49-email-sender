@@ -20,6 +20,7 @@ public class EmailController {
         this.emailService = emailService;
     }
 
+
     @PostMapping
     public ResponseEntity<Void> doSendEmail(@RequestBody @Valid EmailDTO dto){
         emailService.sendEmail(dto);

@@ -1,5 +1,6 @@
 package se.lexicon.g49emailsender.domain.dto;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import lombok.*;
@@ -12,6 +13,7 @@ import lombok.*;
 
 public class EmailDTO {
     @NotBlank(message = "To field cannot be blank.")
+    @Email(message = "To field should be a valid email.")
     private String to;
     @NotBlank(message = "Subject field cannot be blank.")
     private String subject;
